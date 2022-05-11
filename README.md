@@ -6,9 +6,16 @@ Cara generate (harus menggunakan cmd, ga boleh powershell / bash)
 
 # Transactional
 ## Avoiding Deadlock
-- Selalu menjalankan tahapan query dengan urutan Id yang konsisten.
+- Jika terdapat opeperasi dua arah secara concurent (contohnya rekening A melakukan transfer ke rekening B, dan sebaliknya), Selalu menjalankan tahapan query dengan urutan Id yang konsisten.
 Menerapkan data id oriented, bukan operational oriented. 
 https://dev.to/techschoolguru/how-to-avoid-deadlock-in-db-transaction-queries-order-matter-oh7
+
+# Framework
+## Gin
+
+Installing gin :
+
+    go get -u github.com/gin-gonic/gin
 
 # Tools
 ## Docker

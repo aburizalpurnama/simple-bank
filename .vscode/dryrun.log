@@ -1,0 +1,5 @@
+make: Entering directory 'd:/rizal/Go-Projects/simple-bank'
+make: Leaving directory 'd:/rizal/Go-Projects/simple-bank'
+ 
+makefile:2: *** multiple target patterns.  Stop.
+
