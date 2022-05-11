@@ -43,7 +43,7 @@ jobs:
        cd /usr/bin/
        sudo mkdir migrate
        cd migrate
-       curl -L https://github.com/golang-migrate/migrate/releases/download/v4.15.1/migrate.linux-amd64.tar.gz | tar xvz
+       sudo curl -L https://github.com/golang-migrate/migrate/releases/download/v4.15.1/migrate.linux-amd64.tar.gz | tar xvz
        which migrate
 
     - name: Run migrations
