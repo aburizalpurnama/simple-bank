@@ -41,7 +41,7 @@ jobs:
       run: |
         curl -L https://github.com/golang-migrate/migrate/releases/download/v4.15.1/migrate.linux-amd64.tar.gz | tar xvz
         sudo mkdir -p /usr/bin/migrate && sudo mv migrate README.md LICENSE /usr/bin/migrate
-        which migrate
+      # which migrate
       #  mkdir migrate
       #  cd migrate/
       #  curl -L https://github.com/golang-migrate/migrate/releases/download/v4.15.1/migrate.linux-amd64.tar.gz | tar xvz
