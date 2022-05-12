@@ -18,6 +18,7 @@ func NewServer(store *db.Store) *Server {
 
 	router.POST("/accounts", server.createAccount)
 	router.GET("/accounts", server.getListAccounts)
+	router.GET("/accounts/:id", server.getAccount) // tanda : untuk menandakan bahwa itu adalah url parameter
 
 	server.router = router
 	return server
@@ -27,14 +28,38 @@ func (s *Server) Start(address string) error {
 	return s.router.Run(address)
 }
 
+// buatkan package khusus untuk request model
 type createAccountRequest struct {
 	Owner    string `json:"owner" binding:"required"`
 	Currency string `json:"currency" binding:"required,oneof=USD EUR"`
 }
 
 type listAccounstRequest struct {
-	Limit  int32 `json:"limit" binding:"required,numeric,min=1"`
-	Offset int32 `json:"offset" binding:"required,numeric,min=1"`
+	PageSize int32 `json:"page_size" binding:"required,min=5,max=10"`
+	PageId   int32 `json:"page_id" binding:"required,min=1"`
+}
+
+type getAccountRequst struct {
+	ID int64 `uri:"id" binding:"required,min=1"`
+}
+
+type updateAccountRequest struct {
+}
+
+func (s *Server) getAccount(ctx *gin.Context) {
+	var req getAccountRequst
+
+	if err := ctx.ShouldBindUri(&req); err != nil { // karena menggunakan url parameter, menggunakan ctx.ShouldBindUri()
+		ctx.JSON(http.StatusBadRequest, errorResponse(err))
+	}
+
+	account, err := s.store.GetAccount(ctx, req.ID)
+	if err != nil {
+		ctx.JSON(http.StatusInternalServerError, errorResponse(err))
+		return
+	}
+
+	ctx.JSON(http.StatusOK, account)
 }
 
 func (s *Server) getListAccounts(ctx *gin.Context) {
@@ -45,8 +70,8 @@ func (s *Server) getListAccounts(ctx *gin.Context) {
 	}
 
 	arg := db.ListAccountsParams{
-		Limit:  req.Limit,
-		Offset: req.Offset,
+		Limit:  req.PageSize,
+		Offset: (req.PageId - 1) * req.PageSize,
 	}
 
 	listAcount, err := s.store.ListAccounts(ctx, arg)
@@ -81,6 +106,7 @@ func (s *Server) createAccount(ctx *gin.Context) {
 	ctx.JSON(http.StatusOK, account)
 }
 
+// buatkan package khusus untuk response
 func errorResponse(err error) gin.H {
 	return gin.H{"error": err.Error()}
 }
