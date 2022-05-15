@@ -1,6 +1,7 @@
 package api
 
 import (
+	"database/sql"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -48,11 +49,17 @@ func (s *Server) getAccount(ctx *gin.Context) {
 
 	if err := ctx.ShouldBindUri(&req); err != nil { // karena menggunakan url parameter, menggunakan ctx.ShouldBindUri()
 		ctx.JSON(http.StatusBadRequest, errorResponse(err))
+		return
 	}
 
 	account, err := s.store.GetAccount(ctx, req.ID)
 	if err != nil {
-		ctx.JSON(http.StatusInternalServerError, errorResponse(err))
+		if err == sql.ErrNoRows {
+			ctx.JSON(http.StatusNotFound, errorResponse(err))
+		} else {
+			ctx.JSON(http.StatusInternalServerError, errorResponse(err))
+		}
+
 		return
 	}
 
