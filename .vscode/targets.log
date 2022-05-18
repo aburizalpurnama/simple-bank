@@ -8,7 +8,7 @@ makefile:2: *** multiple target patterns.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed May 11 16:15:23 2022
+# Make data base, printed on Mon May 16 13:28:34 2022
 
 # Variables
 
@@ -25,7 +25,7 @@ USERPROFILE = C:\Users\Ideapad
 # environment
 LOCALAPPDATA = C:\Users\Ideapad\AppData\Local
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-06eab0c3-cffa-4187-82e7-0a0fdc8c34b3-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-6ad68451-e00a-412a-ae66-a1c580634420-sock
 # environment
 VSCODE_CWD = C:\Users\Ideapad\AppData\Local\Programs\Microsoft VS Code
 # environment
@@ -151,7 +151,8 @@ PROMPT = $P$G
 # environment
 CHOCOLATEYLASTPATHUPDATE = 132957229222472063
 # environment
-LOGONSERVER = \\DESKTOP-A4PILST
+LOGONSERVER = \ 
+\DESKTOP-A4PILST
 # environment
 VSCODE_LOG_NATIVE = false
 # environment
@@ -239,9 +240,9 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 142 Stepping 9, GenuineIntel
 
 # Directories
 
-# . (key d:/rizal/Go-Projects/simple-bank, mtime 1652260522): 16 files, no impossibilities.
+# . (key d:/rizal/Go-Projects/simple-bank, mtime 1652520574): 17 files, no impossibilities.
 
-# 16 files, no impossibilities in 1 directories.
+# 17 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -281,12 +282,12 @@ postgres:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 30 / storage = 229 B / avg = 7 B
-# current buf: size = 8174 B / used = 229 B / count = 30 / avg = 7 B
+# strcache buffers: 1 (0) / strings = 31 / storage = 237 B / avg = 7 B
+# current buf: size = 8174 B / used = 237 B / count = 31 / avg = 7 B
 
-# strcache performance: lookups = 38 / hit rate = 21%
+# strcache performance: lookups = 39 / hit rate = 20%
 # hash-table stats:
-# Load=30/8192=0%, Rehash=0, Collisions=0/38=0%
-# Finished Make data base on Wed May 11 16:15:23 2022
+# Load=31/8192=0%, Rehash=0, Collisions=0/39=0%
+# Finished Make data base on Mon May 16 13:28:34 2022
 
  
