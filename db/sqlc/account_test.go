@@ -3,7 +3,9 @@ package db
 import (
 	"context"
 	"database/sql"
+	"fmt"
 	"testing"
+	"time"
 
 	"github.com/stretchr/testify/require"
 	"github.com/techschool/simplebank/util"
@@ -104,4 +106,30 @@ func createRandomAccount(t *testing.T) Account {
 	require.NotZero(t, account.CreatedAt)
 
 	return account
+}
+
+func TestAddingDate(t *testing.T) {
+	now := time.Now()
+
+	fmt.Println("now :", now)
+	fmt.Println("adding:", now.AddDate(0, 0, 60))
+
+	a := time.Date(2022, time.April, 10, 0, 0, 0, 0, time.Local)
+	b := time.Date(2022, time.April, 11, 0, 0, 0, 0, time.Local)
+
+	fmt.Println(a)
+	fmt.Println(b)
+	fmt.Println(a == b)
+}
+
+func TestErrorCheck(t *testing.T) {
+	var x []int
+	
+	fmt.Println("before:", len(x))
+
+	for i := 0; i < 10; i++ {
+		x = append(x, i)
+	}
+
+	fmt.Println("after:", len(x))
 }

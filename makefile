@@ -34,4 +34,5 @@ server:
 mock:
     mockgen -package mockdb --build_flags=--mod=mod -destination db/mock/store.go github.com/techschool/simplebank/db/sqlc Store
 
-.PHONY: postgres createdb dropdb migrateup migratedown sqlc test server
+.PHONY:
+    postgres createdb dropdb migrateup migratedown sqlc test server

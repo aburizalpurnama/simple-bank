@@ -1,8 +1,12 @@
 # SQLC
 ### How to Generate using Windows (Menggunakan docker)
-Cara generate (harus menggunakan cmd, ga boleh powershell / bash)
+Cara generate (kalau di windows harus menggunakan cmd, ga boleh powershell / bash)
+
+Terlebih dahulu masuk ke direktori project.
 
     docker run --rm -v "%cd%:/src" -w /src kjconroy/sqlc generate
+
+Bisa digunakan untuk generate, init, dll. tinggal ganti perintahnya.
 
 # Transactional
 ## Avoiding Deadlock

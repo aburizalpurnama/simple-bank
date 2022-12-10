@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"net/http/httptest"
 	"testing"
+	"time"
 
 	"github.com/gin-gonic/gin"
 	"github.com/golang/mock/gomock"
@@ -80,7 +81,14 @@ func TestGetAccountAPI(t *testing.T) {
 			store := mockdb.NewMockStore(ctrl)
 			tc.buildStubs(store)
 
-			server := NewServer(store)
+			config := util.Config{
+				TokenSymmetricKey:   util.RandomString(32),
+				AccessTokenDuration: time.Minute,
+			}
+
+			server, err := NewServer(store, config)
+			require.NoError(t, err)
+
 			recorder := httptest.NewRecorder()
 
 			url := fmt.Sprintf("/accounts/%d", tc.accountId)
@@ -166,7 +174,14 @@ func TestCreateAccountAPI(t *testing.T) {
 			store := mockdb.NewMockStore(ctrl)
 			tc.buildStubs(store)
 
-			server := NewServer(store)
+			config := util.Config{
+				TokenSymmetricKey:   util.RandomString(32),
+				AccessTokenDuration: time.Minute,
+			}
+
+			server, err := NewServer(store, config)
+			require.NoError(t, err)
+
 			recorder := httptest.NewRecorder()
 
 			url := "/accounts"
@@ -300,7 +315,14 @@ func TestListAccountAPI(t *testing.T) {
 			store := mockdb.NewMockStore(ctrl)
 			tc.buildStubs(store)
 
-			server := NewServer(store)
+			config := util.Config{
+				TokenSymmetricKey:   util.RandomString(32),
+				AccessTokenDuration: time.Minute,
+			}
+
+			server, err := NewServer(store, config)
+			require.NoError(t, err)
+
 			recorder := httptest.NewRecorder()
 
 			data, err := json.Marshal(tc.body)

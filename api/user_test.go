@@ -9,6 +9,7 @@ import (
 	"net/http/httptest"
 	"reflect"
 	"testing"
+	"time"
 
 	"github.com/gin-gonic/gin"
 	"github.com/golang/mock/gomock"
@@ -88,7 +89,14 @@ func TestCreateUserApi(t *testing.T) {
 			store := mockdb.NewMockStore(ctrl)
 			tc.buildStub(store)
 
-			server := NewServer(store)
+			config := util.Config{
+				TokenSymmetricKey:   util.RandomString(32),
+				AccessTokenDuration: time.Minute,
+			}
+
+			server, err := NewServer(store, config)
+			require.NoError(t, err)
+
 			recorder := httptest.NewRecorder()
 
 			url := "/users"

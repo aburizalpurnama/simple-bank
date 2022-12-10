@@ -8,7 +8,7 @@ makefile:2: *** multiple target patterns.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon May 16 13:28:34 2022
+# Make data base, printed on Thu Nov 24 09:59:45 2022
 
 # Variables
 
@@ -25,9 +25,7 @@ USERPROFILE = C:\Users\Ideapad
 # environment
 LOCALAPPDATA = C:\Users\Ideapad\AppData\Local
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-6ad68451-e00a-412a-ae66-a1c580634420-sock
-# environment
-VSCODE_CWD = C:\Users\Ideapad\AppData\Local\Programs\Microsoft VS Code
+VSCODE_CWD = C:\Windows\system32
 # environment
 CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
 # environment
@@ -43,7 +41,7 @@ GOPATH = C:\Users\Ideapad\go\bin
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_11964_YEROTUVTGDAFIXOH
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_11984_MSUZNRAFPVKLSLRC
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
@@ -54,12 +52,10 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 %D = $(patsubst %/,%,$(patsubst %\,%,$(dir $%)))
 # automatic
 ^D = $(patsubst %/,%,$(patsubst %\,%,$(dir $^)))
-# environment
-VSCODE_LOG_STACK = false
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = C:\Users\Ideapad\AppData\Roaming\Code\CachedData\57fd6d0195bb9b9d1b49f6da5db789060795de47
+VSCODE_CODE_CACHE_PATH = C:\Users\Ideapad\AppData\Roaming\Code\CachedData\6261075646f055b99068d3688932416f2346dd3b
 # environment
 LANG = C
 # default
@@ -78,8 +74,6 @@ ONEDRIVE = C:\Users\Ideapad\OneDrive
 INTELLIJ IDEA COMMUNITY EDITION = C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.3.3\bin;
 # makefile
 CURDIR := d:/rizal/Go-Projects/simple-bank
-# environment
-VSCODE_PIPE_LOGGING = true
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
@@ -103,9 +97,7 @@ MAKEFILE_LIST := makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_VERBOSE_LOGGING = true
-# environment
-VSCODE_PID = 11964
+VSCODE_PID = 11984
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -139,7 +131,7 @@ MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_201\bin;C:\Program Files\Go\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\Bitvise SSH Client;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\ProgramData\chocolatey\bin;C:\Users\Ideapad\scoop\shims;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Ideapad\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Apache Software Foundation\apache-maven-3.6.1\bin;C:\Users\Ideapad\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.3.3\bin;;C:\Program Files\JetBrains\PyCharm Community Edition 2020.2.1\bin;;C:\Program Files\PostgreSQL\9.5\bin;C:\Program Files\PostgreSQL\9.5\data;C:\Users\Ideapad\go\bin;C:\Program Files\JetBrains\GoLand 2021.3.3\bin;
+PATH = C:\Python310\Scripts\;C:\Python310\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_201\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\Bitvise SSH Client;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files\Go\bin;C:\Users\Ideapad\scoop\shims;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Ideapad\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Apache Software Foundation\apache-maven-3.6.1\bin;C:\Users\Ideapad\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.3.3\bin;;C:\Program Files\JetBrains\PyCharm Community Edition 2020.2.1\bin;;C:\Program Files\PostgreSQL\9.5\bin;C:\Program Files\PostgreSQL\9.5\data;C:\Users\Ideapad\go\bin;C:\Program Files\JetBrains\GoLand 2021.3.3\bin;C:\Users\Ideapad\AppData\Roaming\npm;C:\Users\Ideapad\go\bin
 # environment
 COMPUTERNAME = DESKTOP-A4PILST
 # default
@@ -151,10 +143,7 @@ PROMPT = $P$G
 # environment
 CHOCOLATEYLASTPATHUPDATE = 132957229222472063
 # environment
-LOGONSERVER = \ 
-\DESKTOP-A4PILST
-# environment
-VSCODE_LOG_NATIVE = false
+LOGONSERVER = \\DESKTOP-A4PILST
 # environment
 USERNAME = Ideapad
 # environment
@@ -164,7 +153,7 @@ COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
 # environment
 PROGRAMW6432 = C:\Program Files
 # environment
-PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW
 # automatic
 +F = $(notdir $+)
 # environment
@@ -212,7 +201,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 TEMP = C:\Users\Ideapad\AppData\Local\Temp
 # environment
-VSCODE_IPC_HOOK = \\.\pipe\1e5584b8a4309f615a24c5f85d23379b-1.67.0-main-sock
+VSCODE_IPC_HOOK = \\.\pipe\1e5584b8a4309f615a24c5f85d23379b-1.73.1-main-sock
 # environment
 GOPROXY = https://proxy.golang.org,direct
 # default
@@ -232,7 +221,7 @@ PROCESSOR_REVISION = 8e09
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 142 Stepping 9, GenuineIntel
 # variable set hash-table stats:
-# Load=109/1024=11%, Rehash=0, Collisions=11/119=9%
+# Load=104/1024=10%, Rehash=0, Collisions=10/114=9%
 
 # Pattern-specific Variable Values
 
@@ -240,9 +229,9 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 142 Stepping 9, GenuineIntel
 
 # Directories
 
-# . (key d:/rizal/Go-Projects/simple-bank, mtime 1652520574): 17 files, no impossibilities.
+# . (key d:/rizal/Go-Projects/simple-bank, mtime 1652893553): 18 files, no impossibilities.
 
-# 17 files, no impossibilities in 1 directories.
+# 18 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -282,12 +271,12 @@ postgres:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 31 / storage = 237 B / avg = 7 B
-# current buf: size = 8174 B / used = 237 B / count = 31 / avg = 7 B
+# strcache buffers: 1 (0) / strings = 32 / storage = 243 B / avg = 7 B
+# current buf: size = 8174 B / used = 243 B / count = 32 / avg = 7 B
 
-# strcache performance: lookups = 39 / hit rate = 20%
+# strcache performance: lookups = 40 / hit rate = 20%
 # hash-table stats:
-# Load=31/8192=0%, Rehash=0, Collisions=0/39=0%
-# Finished Make data base on Mon May 16 13:28:34 2022
+# Load=32/8192=0%, Rehash=0, Collisions=0/40=0%
+# Finished Make data base on Thu Nov 24 09:59:45 2022
 
  
